@@ -49,3 +49,15 @@ c2 = worker['joining_date'].dt.month >= 4
 worker[(c1) & (c2)].shape[0]
 ```
 <br/>
+
+## [Workers by Department Since April](https://platform.stratascratch.com/coding/9847-find-the-number-of-workers-by-department?code_type=2)
+
+First attempt:
+```python
+c1 = worker['joining_date'] >= '2014-04-01'
+
+grouped_df = worker[(c1)].groupby('department', as_index = False).size()
+
+grouped_df.sort_values(by = 'size', ascending = False)
+```
+<br/>
