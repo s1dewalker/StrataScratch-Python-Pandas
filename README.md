@@ -209,3 +209,13 @@ amazon_shipment.groupby('year_month', as_index = False).size()
 Notes:  Use `.dt.to_period('M')` → If you need a period format (for time-series analysis) | this will return "YYYY-MM"
 
 <br/>
+
+## [Find all posts which were reacted to with a heart](https://platform.stratascratch.com/coding/10087-find-all-posts-which-were-reacted-to-with-a-heart?code_type=2)
+
+```python
+h = facebook_reactions[facebook_reactions['reaction'] == 'heart']['post_id'] # to extract the common column only (to avoid duplicate columns)
+
+pd.merge(h, facebook_posts, how = 'left', on = 'post_id').drop_duplicates()
+```
+
+<br/>
