@@ -37,3 +37,13 @@ top_products = grouped_df[['product_id', 'total']].sort_values(by='total', ascen
 # Show the result
 top_products
 ```
+## [April Admin Employees](https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=2)
+
+First attempt:
+```python
+c1 = worker['department'] == 'Admin'
+c2 = worker['joining_date'].dt.month >= 4
+
+worker[(c1) & (c2)].shape[0]
+```
+<br/>
