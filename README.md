@@ -69,5 +69,7 @@ grouped_df = hotel_reviews.groupby(['hotel_name', 'total_number_of_reviews'], as
 
 result = grouped_df.sort_values('total_number_of_reviews', ascending=False).drop(columns='size')
 ```
+Note: to handle unique entries in 'total_number_of_reviews' column, used groupby.size() on multiple columns
 <br/>
+
 
