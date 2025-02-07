@@ -159,3 +159,13 @@ joined_df[['department', 'first_name', 'salary', 'avg_salary']]
 ```
 
 <br/>
+
+## [Email Preference Missing](https://platform.stratascratch.com/coding/9924-find-libraries-who-havent-provided-the-email-address-in-2016-but-their-notice-preference-definition-is-set-to-email?code_type=2)
+
+```python
+c1 = (library_usage['circulation_active_year'] == 2016 ) & (library_usage['provided_email_address'] == False) & (library_usage['notice_preference_definition'] == 'email')
+
+library_usage[c1][['home_library_code']].drop_duplicates() # to get unique values
+```
+
+<br/>
