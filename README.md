@@ -7,10 +7,6 @@
 
 First attempt:
 ```python
-# online_orders.head()
-
-#online_orders.dtypes
-
 condition1 = online_orders['date'].between('2022-01-01','2022-06-30') # storing condition
 
 online_orders['total'] = online_orders['units_sold'] * online_orders['cost_in_dollars'] # storing transformed column
