@@ -169,3 +169,21 @@ library_usage[c1][['home_library_code']].drop_duplicates() # to get unique value
 ```
 
 <br/>
+
+## [Salaries Differences](https://platform.stratascratch.com/coding/10308-salaries-differences?code_type=2)
+
+```python
+def sal_diff(x,y):
+    df_joined = pd.merge(db_employee, db_dept, how = 'left', left_on = 'department_id', right_on = 'id')
+
+    sal_max = df_joined.groupby('department', as_index = False).agg(salary_max = ('salary', 'max'))
+
+    s1 = sal_max[sal_max['department'] == x]['salary_max'].values[0]
+    s2 =  sal_max[sal_max['department'] == y]['salary_max'].values[0]
+    
+    return abs(s2-s1)
+
+sal_diff('marketing', 'engineering')
+```
+
+<br/>
