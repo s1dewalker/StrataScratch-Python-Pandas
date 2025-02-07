@@ -61,3 +61,13 @@ grouped_df = worker[(c1)].groupby('department', as_index = False).size()
 grouped_df.sort_values(by = 'size', ascending = False)
 ```
 <br/>
+
+## [Highly Reviewed Hotels](https://platform.stratascratch.com/coding/9871-highly-reviewed-hotels?code_type=2)
+First attempt:
+```python
+grouped_df = hotel_reviews.groupby(['hotel_name', 'total_number_of_reviews'], as_index=False).size()
+
+result = grouped_df.sort_values('total_number_of_reviews', ascending=False).drop(columns='size')
+```
+<br/>
+
