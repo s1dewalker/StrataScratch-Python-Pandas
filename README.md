@@ -78,6 +78,7 @@ grouped_df = dc_bikeshare_q1_2012.groupby('bike_number', as_index = False).agg(l
 
 grouped_df.sort_values(by = 'last_used', ascending = False)
 ```
+Notes: To get the latest 'end_time' use `.max()`
 
 <br/>
 
@@ -100,4 +101,15 @@ airbnb_search_details.groupby(['city','property_type'], as_index = False).agg(
     )
 ```
 
+<br/>
+
+## [Unique Users Per Client Per Month](https://platform.stratascratch.com/coding/2024-unique-users-per-client-per-month?code_type=2)
+```python
+fact_events['time_id'] = fact_events['time_id'].dt.month
+
+fact_events.groupby(['client_id', 'time_id'], as_index = False).agg(size = ('user_id','nunique'))
+```
+Notes:  <br/>
+`.size()` counts all occurrences, including duplicates.
+`.nunique()` counts only distinct (unique) values.
 <br/>
