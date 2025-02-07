@@ -71,4 +71,12 @@ result = grouped_df.sort_values('total_number_of_reviews', ascending=False).drop
 Note: to handle unique entries in 'total_number_of_reviews' column, used groupby.size() on multiple columns
 <br/>
 
+## [Bikes Last Used](https://platform.stratascratch.com/coding/10176-bikes-last-used?code_type=2)
 
+```python
+grouped_df = dc_bikeshare_q1_2012.groupby('bike_number', as_index = False).agg(last_used = ('end_time','max'))
+
+grouped_df.sort_values(by = 'last_used', ascending = False)
+```
+
+<br/>
