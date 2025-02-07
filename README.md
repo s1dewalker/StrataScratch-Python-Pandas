@@ -41,7 +41,6 @@ top_products
 
 ## [April Admin Employees](https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=2)
 
-First attempt:
 ```python
 c1 = worker['department'] == 'Admin'
 c2 = worker['joining_date'].dt.month >= 4
@@ -52,7 +51,7 @@ worker[(c1) & (c2)].shape[0]
 
 ## [Workers by Department Since April](https://platform.stratascratch.com/coding/9847-find-the-number-of-workers-by-department?code_type=2)
 
-First attempt:
+
 ```python
 c1 = worker['joining_date'] >= '2014-04-01'
 
@@ -63,7 +62,7 @@ grouped_df.sort_values(by = 'size', ascending = False)
 <br/>
 
 ## [Highly Reviewed Hotels](https://platform.stratascratch.com/coding/9871-highly-reviewed-hotels?code_type=2)
-First attempt:
+
 ```python
 grouped_df = hotel_reviews.groupby(['hotel_name', 'total_number_of_reviews'], as_index=False).size()
 
