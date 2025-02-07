@@ -199,3 +199,13 @@ sf_restaurant_health_violations[c].groupby('year', as_index = False).agg(n_viola
 ```
 
 <br/>
+
+## [Number of Shipments Per Month](https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=2)
+
+```python
+amazon_shipment['year_month'] = amazon_shipment['shipment_date'].dt.to_period('M')
+amazon_shipment.groupby('year_month', as_index = False).size()
+```
+Notes:  Use `.dt.to_period('M')` → If you need a period format (for time-series analysis) | this will return "YYYY-MM"
+
+<br/>
