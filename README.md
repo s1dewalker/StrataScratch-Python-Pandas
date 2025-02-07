@@ -80,3 +80,13 @@ grouped_df.sort_values(by = 'last_used', ascending = False)
 ```
 
 <br/>
+
+## [Customer Details](https://platform.stratascratch.com/coding/9891-customer-details?code_type=2)
+
+```python
+df1 = pd.merge(customers, orders, how ='left', left_on = 'id', right_on = 'cust_id')
+
+df1[['first_name','last_name', 'city', 'order_details']].sort_values(by = ['first_name','order_details'], ascending = [True, True])
+```
+
+<br/>
