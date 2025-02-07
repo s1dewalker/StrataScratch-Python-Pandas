@@ -110,6 +110,13 @@ fact_events['time_id'] = fact_events['time_id'].dt.month
 fact_events.groupby(['client_id', 'time_id'], as_index = False).agg(size = ('user_id','nunique'))
 ```
 Notes:  <br/>
-`.size()` counts all occurrences, including duplicates.
-`.nunique()` counts only distinct (unique) values.
+`.size()` counts all occurrences, including duplicates. <br/>
+`.nunique()` counts only distinct (unique) values.<br/>
+<br/>
+
+Example:<br/>
+If client_1 has users user_1, user_2, user_1 in January, here's how .size() and .nunique() would behave:<br/>
+
+`.size()` would return 3 (since there are three records).<br/>
+`.nunique()` would return 2 (since there are only two unique users).<br/>
 <br/>
