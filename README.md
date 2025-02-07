@@ -120,3 +120,18 @@ If client_1 has users user_1, user_2, user_1 in January, here's how .size() and 
 `.size()` would return 3 (since there are three records).<br/>
 `.nunique()` would return 2 (since there are only two unique users).<br/>
 <br/>
+
+## [Order Details](https://platform.stratascratch.com/coding/9913-order-details?code_type=2)
+
+```python
+df1 = pd.merge(customers, orders, how = 'right', left_on = 'id', right_on = 'cust_id')
+
+c1 = (df1['first_name'] == 'Jill') | (df1['first_name'] == 'Eva')
+
+sorted_df = df1[c1].sort_values(by = 'cust_id')
+
+sorted_df[['first_name', 'order_date','order_details', 'total_order_cost']]
+```
+
+<br/>
+
