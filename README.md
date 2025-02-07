@@ -135,3 +135,15 @@ sorted_df[['first_name', 'order_date','order_details', 'total_order_cost']] # th
 
 <br/>
 
+
+## [Find the most profitable company in the financial sector of the entire world along with its continent](https://platform.stratascratch.com/coding/9663-find-the-most-profitable-company-in-the-financial-sector-of-the-entire-world-along-with-its-continent?code_type=2)
+
+```python
+c1 = forbes_global_2010_2014['sector'] == 'Financials'
+
+c2 = forbes_global_2010_2014['profits'] == forbes_global_2010_2014['profits'].max()
+
+forbes_global_2010_2014[(c1) & (c2)][['company','continent']]
+```
+
+<br/>
