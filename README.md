@@ -128,9 +128,9 @@ df1 = pd.merge(customers, orders, how = 'right', left_on = 'id', right_on = 'cus
 
 c1 = (df1['first_name'] == 'Jill') | (df1['first_name'] == 'Eva')
 
-sorted_df = df1[c1].sort_values(by = 'cust_id')
+sorted_df = df1[c1].sort_values(by = 'cust_id') # first sort
 
-sorted_df[['first_name', 'order_date','order_details', 'total_order_cost']]
+sorted_df[['first_name', 'order_date','order_details', 'total_order_cost']] # then get the required columns not involving the sort by column
 ```
 
 <br/>
