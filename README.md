@@ -187,3 +187,15 @@ sal_diff('marketing', 'engineering')
 ```
 
 <br/>
+
+## [Number of violations](https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=2)
+
+```python
+c = sf_restaurant_health_violations['business_name'] == 'Roxanne Cafe'
+
+sf_restaurant_health_violations['year'] = sf_restaurant_health_violations['inspection_date'].dt.year
+
+sf_restaurant_health_violations[c].groupby('year', as_index = False).agg(n_violations = ('violation_id', 'nunique'))
+```
+
+<br/>
