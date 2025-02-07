@@ -90,3 +90,14 @@ df1[['first_name','last_name', 'city', 'order_details']].sort_values(by = ['firs
 ```
 
 <br/>
+
+## [Number Of Bathrooms And Bedrooms](https://platform.stratascratch.com/coding/9622-number-of-bathrooms-and-bedrooms?code_type=2)
+
+```python
+airbnb_search_details.groupby(['city','property_type'], as_index = False).agg(
+    n_bedrooms_avg = ('bedrooms','mean'),
+    n_bathrooms_avg = ('bathrooms', 'mean')
+    )
+```
+
+<br/>
