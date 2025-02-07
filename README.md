@@ -147,3 +147,15 @@ forbes_global_2010_2014[(c1) & (c2)][['company','continent']]
 ```
 
 <br/>
+
+## [Average Salaries](https://platform.stratascratch.com/coding/9917-average-salaries?code_type=2)
+
+```python
+avg_sal = employee.groupby('department', as_index = False).agg(avg_salary = ('salary', 'mean'))
+
+joined_df = pd.merge(employee, avg_sal, how  = 'left', on = 'department')
+
+joined_df[['department', 'first_name', 'salary', 'avg_salary']]
+```
+
+<br/>
