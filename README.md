@@ -2,7 +2,7 @@
 
 #### View StrataScratch Analytical Questions | Python-Pandas, here: [stratascratch.com](https://platform.stratascratch.com/coding?code_type=2&is_freemium=1&order_field=difficulty)
 
-#### Easy | [Medium](https://github.com/s1dewalker/StrataScratch-Python-Pandas-2) | Hard
+#### Easy | [Medium](https://github.com/s1dewalker/StrataScratch-Python-Pandas-2) | [Hard](https://github.com/s1dewalker/StrataScratch-Python-Pandas-3)
 <br/>
 
 ## [Most Lucrative Products](https://platform.stratascratch.com/coding/2119-most-lucrative-products?code_type=2)
