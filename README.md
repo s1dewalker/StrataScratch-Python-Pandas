@@ -227,6 +227,7 @@ Notes:
 1. Use `.dt.to_period('M')` → If you need a period format (for time-series analysis) | this will return "YYYY-MM"
 2. Use `.astype(str)` to convert int to string to add (concatenate) them for unique ids (without numeric addition)
 
+🏷️: Time Series ⏱️
 <br/>
 
 ## #16. [Find all posts which were reacted to with a heart](https://platform.stratascratch.com/coding/10087-find-all-posts-which-were-reacted-to-with-a-heart?code_type=2)
