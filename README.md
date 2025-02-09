@@ -200,7 +200,7 @@ def maxsal(x,y):
     
 maxsal('marketing', 'engineering')
 ```
-
+🏷️: Functions (fn)
 <br/>
 
 ## #14. [Number of violations](https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=2)
