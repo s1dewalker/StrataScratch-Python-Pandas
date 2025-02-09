@@ -188,6 +188,19 @@ def sal_diff(x,y):
 sal_diff('marketing', 'engineering')
 ```
 
+Second:
+```python
+j_df = pd.merge(db_employee, db_dept, how = 'left', left_on = 'department_id', right_on = 'id')
+
+def maxsal(x,y):
+    maxs1 = j_df[j_df['department'] == x][['salary']].max()
+    maxs2 = j_df[j_df['department'] == y][['salary']].max()
+    
+    return abs(maxs2 - maxs1)
+    
+maxsal('marketing', 'engineering')
+```
+
 <br/>
 
 ## #14. [Number of violations](https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=2)
