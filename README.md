@@ -6,7 +6,6 @@
 <br/>
 
 ## #1. [Most Lucrative Products](https://platform.stratascratch.com/coding/2119-most-lucrative-products?code_type=2) ⭐
-
 First attempt:
 ```python
 condition1 = online_orders['date'].between('2022-01-01','2022-06-30') # storing condition
@@ -39,6 +38,7 @@ top_products = grouped_df[['product_id', 'total']].sort_values(by='total', ascen
 # Show the result
 top_products
 ```
+#### 🏷️: Time Series ⏱️
 <br/>
 
 ## #2. [April Admin Employees](https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=2)
