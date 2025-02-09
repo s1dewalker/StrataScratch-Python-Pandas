@@ -5,7 +5,7 @@
 #### Easy | [Medium](https://github.com/s1dewalker/StrataScratch-Python-Pandas-2) | [Hard](https://github.com/s1dewalker/StrataScratch-Python-Pandas-3)
 <br/>
 
-## #1. [Most Lucrative Products](https://platform.stratascratch.com/coding/2119-most-lucrative-products?code_type=2)
+## #1. [Most Lucrative Products](https://platform.stratascratch.com/coding/2119-most-lucrative-products?code_type=2) ⭐
 
 First attempt:
 ```python
@@ -138,7 +138,7 @@ sorted_df[['first_name', 'order_date','order_details', 'total_order_cost']] # th
 <br/>
 
 
-## #10. [Find the most profitable company in the financial sector of the entire world along with its continent](https://platform.stratascratch.com/coding/9663-find-the-most-profitable-company-in-the-financial-sector-of-the-entire-world-along-with-its-continent?code_type=2)
+## #10. [Find the most profitable company in the financial sector of the entire world along with its continent](https://platform.stratascratch.com/coding/9663-find-the-most-profitable-company-in-the-financial-sector-of-the-entire-world-along-with-its-continent?code_type=2) ⭐
 
 ```python
 c1 = forbes_global_2010_2014['sector'] == 'Financials'
@@ -172,7 +172,7 @@ library_usage[c1][['home_library_code']].drop_duplicates() # to get unique value
 
 <br/>
 
-## #13. [Salaries Differences](https://platform.stratascratch.com/coding/10308-salaries-differences?code_type=2)
+## #13. [Salaries Differences](https://platform.stratascratch.com/coding/10308-salaries-differences?code_type=2) ⭐
 
 ```python
 def sal_diff(x,y):
@@ -202,7 +202,7 @@ sf_restaurant_health_violations[c].groupby('year', as_index = False).agg(n_viola
 
 <br/>
 
-## #15. [Number of Shipments Per Month](https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=2)
+## #15. [Number of Shipments Per Month](https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=2) ⭐
 
 ```python
 amazon_shipment['year_month'] = amazon_shipment['shipment_date'].dt.to_period('M')
