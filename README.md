@@ -5,7 +5,7 @@
 #### Easy | [Medium](https://github.com/s1dewalker/StrataScratch-Python-Pandas-2) | [Hard](https://github.com/s1dewalker/StrataScratch-Python-Pandas-3)
 <br/>
 
-## [Most Lucrative Products](https://platform.stratascratch.com/coding/2119-most-lucrative-products?code_type=2)
+## #1. [Most Lucrative Products](https://platform.stratascratch.com/coding/2119-most-lucrative-products?code_type=2)
 
 First attempt:
 ```python
@@ -41,7 +41,7 @@ top_products
 ```
 <br/>
 
-## [April Admin Employees](https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=2)
+## #2. [April Admin Employees](https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=2)
 
 ```python
 c1 = worker['department'] == 'Admin'
@@ -51,7 +51,7 @@ worker[(c1) & (c2)].shape[0]
 ```
 <br/>
 
-## [Workers by Department Since April](https://platform.stratascratch.com/coding/9847-find-the-number-of-workers-by-department?code_type=2)
+## #3. [Workers by Department Since April](https://platform.stratascratch.com/coding/9847-find-the-number-of-workers-by-department?code_type=2)
 
 
 ```python
@@ -63,7 +63,7 @@ grouped_df.sort_values(by = 'size', ascending = False)
 ```
 <br/>
 
-## [Highly Reviewed Hotels](https://platform.stratascratch.com/coding/9871-highly-reviewed-hotels?code_type=2)
+## #4. [Highly Reviewed Hotels](https://platform.stratascratch.com/coding/9871-highly-reviewed-hotels?code_type=2)
 
 ```python
 grouped_df = hotel_reviews.groupby(['hotel_name', 'total_number_of_reviews'], as_index=False).size()
@@ -73,7 +73,7 @@ result = grouped_df.sort_values('total_number_of_reviews', ascending=False).drop
 Note: to handle unique entries in 'total_number_of_reviews' column, used groupby.size() on multiple columns
 <br/>
 
-## [Bikes Last Used](https://platform.stratascratch.com/coding/10176-bikes-last-used?code_type=2)
+## #5. [Bikes Last Used](https://platform.stratascratch.com/coding/10176-bikes-last-used?code_type=2)
 
 ```python
 grouped_df = dc_bikeshare_q1_2012.groupby('bike_number', as_index = False).agg(last_used = ('end_time','max'))
@@ -84,7 +84,7 @@ Notes: To get the latest 'end_time' use `.max()`
 
 <br/>
 
-## [Customer Details](https://platform.stratascratch.com/coding/9891-customer-details?code_type=2)
+## #6. [Customer Details](https://platform.stratascratch.com/coding/9891-customer-details?code_type=2)
 
 ```python
 df1 = pd.merge(customers, orders, how ='left', left_on = 'id', right_on = 'cust_id')
@@ -94,7 +94,7 @@ df1[['first_name','last_name', 'city', 'order_details']].sort_values(by = ['firs
 
 <br/>
 
-## [Number Of Bathrooms And Bedrooms](https://platform.stratascratch.com/coding/9622-number-of-bathrooms-and-bedrooms?code_type=2)
+## #7. [Number Of Bathrooms And Bedrooms](https://platform.stratascratch.com/coding/9622-number-of-bathrooms-and-bedrooms?code_type=2)
 
 ```python
 airbnb_search_details.groupby(['city','property_type'], as_index = False).agg(
@@ -105,7 +105,7 @@ airbnb_search_details.groupby(['city','property_type'], as_index = False).agg(
 
 <br/>
 
-## [Unique Users Per Client Per Month](https://platform.stratascratch.com/coding/2024-unique-users-per-client-per-month?code_type=2)
+## #8. [Unique Users Per Client Per Month](https://platform.stratascratch.com/coding/2024-unique-users-per-client-per-month?code_type=2)
 ```python
 fact_events['time_id'] = fact_events['time_id'].dt.month
 
@@ -123,7 +123,7 @@ If client_1 has users user_1, user_2, user_1 in January, here's how .size() and 
 `.nunique()` would return 2 (since there are only two unique users).<br/>
 <br/>
 
-## [Order Details](https://platform.stratascratch.com/coding/9913-order-details?code_type=2)
+## #9. [Order Details](https://platform.stratascratch.com/coding/9913-order-details?code_type=2)
 
 ```python
 df1 = pd.merge(customers, orders, how = 'right', left_on = 'id', right_on = 'cust_id')
@@ -138,7 +138,7 @@ sorted_df[['first_name', 'order_date','order_details', 'total_order_cost']] # th
 <br/>
 
 
-## [Find the most profitable company in the financial sector of the entire world along with its continent](https://platform.stratascratch.com/coding/9663-find-the-most-profitable-company-in-the-financial-sector-of-the-entire-world-along-with-its-continent?code_type=2)
+## #10. [Find the most profitable company in the financial sector of the entire world along with its continent](https://platform.stratascratch.com/coding/9663-find-the-most-profitable-company-in-the-financial-sector-of-the-entire-world-along-with-its-continent?code_type=2)
 
 ```python
 c1 = forbes_global_2010_2014['sector'] == 'Financials'
@@ -150,7 +150,7 @@ forbes_global_2010_2014[(c1) & (c2)][['company','continent']]
 
 <br/>
 
-## [Average Salaries](https://platform.stratascratch.com/coding/9917-average-salaries?code_type=2)
+## #11. [Average Salaries](https://platform.stratascratch.com/coding/9917-average-salaries?code_type=2)
 
 ```python
 avg_sal = employee.groupby('department', as_index = False).agg(avg_salary = ('salary', 'mean'))
@@ -162,7 +162,7 @@ joined_df[['department', 'first_name', 'salary', 'avg_salary']]
 
 <br/>
 
-## [Email Preference Missing](https://platform.stratascratch.com/coding/9924-find-libraries-who-havent-provided-the-email-address-in-2016-but-their-notice-preference-definition-is-set-to-email?code_type=2)
+## #12. [Email Preference Missing](https://platform.stratascratch.com/coding/9924-find-libraries-who-havent-provided-the-email-address-in-2016-but-their-notice-preference-definition-is-set-to-email?code_type=2)
 
 ```python
 c1 = (library_usage['circulation_active_year'] == 2016 ) & (library_usage['provided_email_address'] == False) & (library_usage['notice_preference_definition'] == 'email')
@@ -172,7 +172,7 @@ library_usage[c1][['home_library_code']].drop_duplicates() # to get unique value
 
 <br/>
 
-## [Salaries Differences](https://platform.stratascratch.com/coding/10308-salaries-differences?code_type=2)
+## #13. [Salaries Differences](https://platform.stratascratch.com/coding/10308-salaries-differences?code_type=2)
 
 ```python
 def sal_diff(x,y):
@@ -190,7 +190,7 @@ sal_diff('marketing', 'engineering')
 
 <br/>
 
-## [Number of violations](https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=2)
+## #14. [Number of violations](https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=2)
 
 ```python
 c = sf_restaurant_health_violations['business_name'] == 'Roxanne Cafe'
@@ -202,7 +202,7 @@ sf_restaurant_health_violations[c].groupby('year', as_index = False).agg(n_viola
 
 <br/>
 
-## [Number of Shipments Per Month](https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=2)
+## #15. [Number of Shipments Per Month](https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=2)
 
 ```python
 amazon_shipment['year_month'] = amazon_shipment['shipment_date'].dt.to_period('M')
@@ -212,7 +212,7 @@ Notes:  Use `.dt.to_period('M')` → If you need a period format (for time-serie
 
 <br/>
 
-## [Find all posts which were reacted to with a heart](https://platform.stratascratch.com/coding/10087-find-all-posts-which-were-reacted-to-with-a-heart?code_type=2)
+## #16. [Find all posts which were reacted to with a heart](https://platform.stratascratch.com/coding/10087-find-all-posts-which-were-reacted-to-with-a-heart?code_type=2)
 
 ```python
 h = facebook_reactions[facebook_reactions['reaction'] == 'heart']['post_id'] # to extract the common column only (to avoid duplicate columns)
