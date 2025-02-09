@@ -206,9 +206,13 @@ sf_restaurant_health_violations[c].groupby('year', as_index = False).agg(n_viola
 
 ```python
 amazon_shipment['year_month'] = amazon_shipment['shipment_date'].dt.to_period('M')
-amazon_shipment.groupby('year_month', as_index = False).size()
+amazon_shipment['id'] = amazon_shipment['shipment_id'].astype(str) + amazon_shipment['sub_id'].astype(str)
+
+g_df = amazon_shipment.groupby('year_month',as_index = False).agg(count = ('id','nunique'))
 ```
-Notes:  Use `.dt.to_period('M')` → If you need a period format (for time-series analysis) | this will return "YYYY-MM"
+Notes:  
+1. Use `.dt.to_period('M')` → If you need a period format (for time-series analysis) | this will return "YYYY-MM"
+2. Use `.astype(str)` to convert int to string to add (concatenate) them for unique ids (without numeric addition)
 
 <br/>
 
