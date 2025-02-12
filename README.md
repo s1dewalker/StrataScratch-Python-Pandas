@@ -81,7 +81,7 @@ grouped_df = dc_bikeshare_q1_2012.groupby('bike_number', as_index = False).agg(l
 grouped_df.sort_values(by = 'last_used', ascending = False)
 ```
 Notes: To get the latest 'end_time' use `.max()`
-
+#### 🏷️: Time Series ⏱️
 <br/>
 
 ## #6. [Customer Details](https://platform.stratascratch.com/coding/9891-customer-details?code_type=2)
