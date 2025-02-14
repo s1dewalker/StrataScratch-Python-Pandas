@@ -102,7 +102,7 @@ airbnb_search_details.groupby(['city','property_type'], as_index = False).agg(
     n_bathrooms_avg = ('bathrooms', 'mean')
     )
 ```
-
+Notes: Multi group + multi agg
 <br/>
 
 ## #8. [Unique Users Per Client Per Month](https://platform.stratascratch.com/coding/2024-unique-users-per-client-per-month?code_type=2)
@@ -114,6 +114,7 @@ fact_events.groupby(['client_id', 'time_id'], as_index = False).agg(size = ('use
 Notes:  <br/>
 `.size()` counts all occurrences, including duplicates. <br/>
 `.nunique()` counts only distinct (unique) values.<br/>
+
 <br/>
 
 Example:<br/>
@@ -121,7 +122,9 @@ If client_1 has users user_1, user_2, user_1 in January, here's how .size() and 
 
 `.size()` would return 3 (since there are three records).<br/>
 `.nunique()` would return 2 (since there are only two unique users).<br/>
-<br/>
+
+#### 🏷️: Time Series ⏱️<br/>
+
 
 ## #9. [Order Details](https://platform.stratascratch.com/coding/9913-order-details?code_type=2)
 
@@ -200,7 +203,11 @@ def maxsal(x,y):
     
 maxsal('marketing', 'engineering')
 ```
-🏷️: Functions (fn)
+Notes: <br/>
+→ join <br/> → def fn (**constraints variable** for each condition):<br/> → call fn (w/ constraints inputs)
+
+##### 🏷️: Functions (fn)
+
 <br/>
 
 ## #14. [Number of violations](https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=2)
